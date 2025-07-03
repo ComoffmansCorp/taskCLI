@@ -1,19 +1,27 @@
-public class task {
-    String nameTask;
-    int dateStart;
-    int dateEnd;
-    boolean completed;
+import java.time.LocalDateTime;
 
-    public task(String name, int dateStart, int dateEnd, boolean completed) {
+public class task {
+    private String nameTask;
+    private LocalDateTime dateStart;
+    private LocalDateTime dateEnd;
+    private boolean isCompleted;
+
+    public task(String name, LocalDateTime dateEnd, boolean isCompleted) {
         this.nameTask = name;
-        this.dateStart = dateStart;
+        this.dateStart = LocalDateTime.now();
         this.dateEnd = dateEnd;
-        this.completed = completed;
+        this.isCompleted = isCompleted;
     }
 
     public void setName( String nameTask) { this.nameTask = nameTask; }
-    public void setDateStart( int dateStart ) { this.dateStart = dateStart; }
-    public void setDateEnd ( int dateEnd )    
+    public void setDateStart( LocalDateTime dateStart ) { this.dateStart = dateStart; }
+    public void setDateEnd ( LocalDateTime dateEnd )  { this.dateEnd = dateEnd; }
+    public void setIsCompleted ( boolean isCompleted ) { this.isCompleted = isCompleted; }
 
-    
+    public String getNameTask() { return nameTask; }
+    public LocalDateTime getDateStart() { return dateStart; }
+    public LocalDateTime getDateEnd() { return dateEnd; }
+    public boolean getIsCompleted() { return isCompleted; }
+
+
 }
