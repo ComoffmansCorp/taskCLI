@@ -11,7 +11,7 @@ public class task {
         this.completed = completed;
     }
 
-    public void setName( String nameTask ) { this.nameTask = nameTask; }
+    public void setName( String nameTask) { this.nameTask = nameTask; }
     public void setDateStart( int dateStart ) { this.dateStart = dateStart; }
     public void setDateEnd ( int dateEnd )    
 
